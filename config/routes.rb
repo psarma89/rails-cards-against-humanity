@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
-  get '/cards', to: 'cards#index'
-  resources :cards
+  namespace :api do
+    namespace :v1 do
+      resources :cards, only: [:index]
+    end
+  end
 end
