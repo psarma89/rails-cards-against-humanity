@@ -9,7 +9,7 @@ class ApplicationController < ActionController::API
  end
 
  def current_user
-   @user ||= User.find_by(username: user_id)
+   @user ||= User.find_by(id: user_id)
  end
 
  def user_id
