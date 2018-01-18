@@ -1,5 +1,5 @@
 class Api::V1::CardsController < ApplicationController
-
+  
   def index
     # byebug
     render json: RENDER_CARDS
