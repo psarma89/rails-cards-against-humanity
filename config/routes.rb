@@ -7,7 +7,8 @@ Rails.application.routes.draw do
       # post '/users' => 'users#create'
       post '/login' => 'auth#create'
       get '/current_user' => 'auth#show'
-
     end
   end
+  mount ActionCable.server => '/cable'
+  resources :messages, :conversations
 end
