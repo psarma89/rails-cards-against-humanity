@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :cards, only: [:index]
       resources :rooms, only: [:index, :show]
+      post '/joinroom' => 'rooms#joinroom'
       post '/signup' => 'users#create'
       # post '/users' => 'users#create'
       post '/login' => 'auth#create'
